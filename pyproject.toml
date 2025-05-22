@@ -8,6 +8,7 @@ readme = "README.md"
 homepage = "https://github.com/edmar_bevilaqua/dengue_analysis"
 repository = "https://github.com/edmar_bevilaqua/dengue_analysis"
 keywords = ["dengue", "analysis", "data science"]
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.11"
