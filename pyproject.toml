@@ -8,6 +8,7 @@ readme = "README.md"
 homepage = "https://github.com/edmar_bevilaqua/dengue_analysis"
 repository = "https://github.com/edmar_bevilaqua/dengue_analysis"
 keywords = ["dengue", "analysis", "data science"]
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -18,6 +19,7 @@ seaborn = "^0.12"
 scikit-learn = "^1.2"
 keras = "^2.12"
 torch = "^2.0"
+ipykernel = "^6.29.5"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
