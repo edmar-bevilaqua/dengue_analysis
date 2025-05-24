@@ -1,3 +1,5 @@
+import pandas as pd
+
 def print_with_colors(msg: str, color: str, end: str = "\n") -> None:
     """
     Prints a message in the specified color using ANSI escape codes.
@@ -24,3 +26,17 @@ def print_with_colors(msg: str, color: str, end: str = "\n") -> None:
     else:
         print(f"(Warning: Color '{color}' not found. printing with default color.)")
         print(msg, end=end)
+
+
+def is_int(val):
+    """
+    Verify if a given value is integer, ignoring NaNs.
+    """
+    try:
+        # Try to convert to integer, ignoring NaN
+        if pd.isnull(val):
+            return False
+        int(val)
+        return True
+    except (ValueError, TypeError):
+        return False
