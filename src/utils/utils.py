@@ -40,3 +40,52 @@ def is_int(val):
         return True
     except (ValueError, TypeError):
         return False
+
+import pandas as pd
+import numpy as np
+
+def process_num_like_cols(df: pd.DataFrame, threshold: float = 0.5) -> pd.DataFrame:
+    """
+    Analyzes 'object' or 'category' columns and converts them to numeric type
+    if the majority of their values are "number-like".
+
+        Values that cannot be converted to number in the selected column
+    are transformed into NaN.
+
+        Args:
+    df (pd.DataFrame): The DataFrame to be cleared.
+    threshold (float): The proportion of numeric values (between 0.0 and 1.0)
+    required for a column to be considered "mostly
+    numeric". The default is 0.5 (50%).
+
+        Returns:
+    pd.DataFrame: The DataFrame with the columns cleaned up. The modification is
+    made to the original DataFrame (in-place) to save memory.
+    """
+
+    converted_cols = []
+    
+    cols_to_verify = df.columns
+
+    for col in cols_to_verify:
+        nan_free_col = df[col].dropna()
+
+        if nan_free_col.empty:
+            print_with_colors(f"  - Feature '{col}' only had NaN values, dropping...", "red", end="\n\n")
+            df = df.drop(columns=[col])
+            continue
+
+        nums_vals = pd.to_numeric(nan_free_col.astype(str), errors='coerce')
+
+        nums_ratio = nums_vals.notna().sum() / len(nan_free_col)
+
+        if nums_ratio > threshold:
+            print_with_colors(f"  - Feature '{col}': {nums_ratio:.2%} of values are numeric. Converting...", "yellow", end="\n\n")
+            
+            df[col] = pd.to_numeric(df[col].astype(str), errors='coerce')
+            converted_cols.append(col)
+        else:
+             print_with_colors(f"  - Feature '{col}': {nums_ratio:.2%} of values are numeric. Keeping as is.", "yellow", end="\n\n")
+
+    print(f"Features converted to numeric data type: {converted_cols}")
+    return df
