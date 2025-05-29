@@ -89,3 +89,20 @@ def process_num_like_cols(df: pd.DataFrame, threshold: float = 0.5) -> pd.DataFr
 
     print(f"Features converted to numeric data type: {converted_cols}")
     return df
+
+def print_with_multiple_columns(columns: list, n_cols: int = 5) -> None:
+    """
+    Prints multiple columns with their corresponding values in a formatted way.
+    
+    :param columns: List of column names.
+    :param n_cols: The amount of columns to be printed in each row.
+    """
+    n = 0
+    max_width = max(len(str(col)) for col in columns)
+    for col in columns:
+        if n // n_cols == 0:
+            print(f"{col:<{max_width + 2}}", end=" ")
+            n += 1
+        else:
+            print(f"{col:<{max_width + 2}}", end="\n")
+            n = 0
