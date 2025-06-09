@@ -1,0 +1,45 @@
+Attribute,Description,Values
+ARTRALGIA,Symptom - Arthralgia,1. Yes; 2. No
+ARTRITE,Symptom - Arthritis,1. Yes; 2. No
+AUTO_IMUNE,Pre-existing disease - Autoimmune disease,1. Yes; 2. No; 1. Yes; 2. No
+CEFALEIA,Symptom - Headache,1. Yes; 2. No
+CLASSI_FIN,Final patient classification,Chikungunya; Dengue; Discared/Inconclusive
+CONJUNTVIT,Symptom - Conjunctivitis,1. Yes; 2. No
+CS_ESCOL_N,Patient education,1. Elementary School incomplete; 2. Elementary School complete; 3. Middle School incomplete; 4. Middle School complete; 5. High School incomplete; 6. High School complete; 7. College incomplete; 8. College complete; 9. Ignored; 10. Not applicable
+CS_GESTANT,Gestational Age of the Patient (Quarter) in case CS_SEXO=Female,1. 1st Quarter; 2. 2nd Quarter; 3. 3rd Quarter; 4. Gestational age ignored; 5. No; 6. Not applicable; 9. Ignored
+CS_RACA,Patient Race,1. White; 2. Black; 3. Yellow; 4. Brown; 5. Indigenous; 9. Ignored
+CS_SEXO,Pacient sex,1. Male; 2. Female
+DIABETES,Pre-existing disease - Diabetes,1. Yes; 2. No
+DOR_COSTAS,Symptom - Back Pain,1. Yes; 2. No
+DOR_RETRO,Symptom - Retroorbital pain,1. Yes; 2. No
+DT_INVEST,Start date of case investigation,Date (dd/mm/yyyy)
+DT_NASC,Patient date of birth,Date (dd/mm/yyyy)
+DT_NOTIFIC,Notification date,Date (dd/mm/yyyy)
+DT_SIN_PRI,Date of onset of severe symptoms,Date (dd/mm/yyyy)
+EXANTEMA,Symptom - Rash,1. Yes; 2. No
+FEBRE,Symptom - Fever,1. Yes; 2. No
+HEMATOLOG,Pre-existing disease - Hematological diseases,1. Yes; 2. No
+HEPATOPAT,Pre-existing disease - Liver diseases,1. Yes; 2. No
+HIPERTENSA,Pre-existing disease - Hypertension,1. Yes; 2. No
+HOSPITALIZ,If the patient was hospitalized,1. Yes; 2. No; 9. Ignored
+ID_MN_RESI,City of the patient (IBGE code),Number
+ID_MUNICIP,City of Health Unit (IBGE Code),Number
+ID_PAIS,Patient Country Code (IBGE Code),Number
+ID_REGIONA,Health facility code,Number
+ID_RG_RESI,Health facility code,Number
+ID_UNIDADE,Health facility code,Number
+LACO,Symptom - Tourniquet test,1. Yes; 2. No
+LEUCOPENIA,Leukopenia - Low level of white blood cells in the blood,1. Yes; 2. No
+MIALGIA,Symptom - Myalgia,1. Yes; 2. No
+NAUSEA,Symptom - Nausea,1. Yes; 2. No
+NU_ANO,Notification year,Number
+NU_IDADE_N,Patient age,Number
+PETEQUIA_N,Symptom - Petechiae,1. Yes; 2. No
+RENAL,Pre-existing disease - Kidney disease,1. Yes; 2. No
+SEM_NOT,Epidemiological notification week,Number
+SEM_PRI,Epidemiological week of onset of symptoms,Number
+SG_UF,Patient status (IBGE code),Number
+SG_UF_NOT,Acronym of the state of the health unit,Text
+VOMITO,Symptom - Vomiting,1. Yes; 2. No
+ACIDO_PEPT,Pre-existing disease - Acid peptic disease,1: Yes; 2: No
+time_until_report,Time until report,0: 0 days; 1: 1 day; 2: 2 days; ...; 30: 30 days
